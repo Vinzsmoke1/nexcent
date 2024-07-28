@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     background-color: #d1d5db;
     font-family: Arial, sans-serif;
@@ -8,6 +12,7 @@ body {
     display: flex;
     align-items: center;
     background-color: #d1d5db;
+    margin-bottom: 300px;
 }
 h1 {
     margin-right: 20px;
@@ -42,6 +47,14 @@ h1 {
     font-size: 120%;
     color: black;
     text-decoration: none;
+}
+.login {
+    padding: 10px 20px; 
+    background-color: #16a34a; 
+    color: white;
+    text-decoration: none; 
+    border-radius: 5px; 
+    margin-left: 200px;
 }
 .header2 {
     margin-top: 50px;
@@ -81,7 +94,9 @@ p {
     background-color: #d1d5db;
     padding: 20px;
     justify-content: space-between; /* to have space between */
+    margin-top: -200px;
 }
+
 .client-section {
     background-color:#ffffff;
     text-align: center;
@@ -149,7 +164,7 @@ h2 {
     margin: 0;
   }
   .product-section {
-    padding: 70px 0 50px 0;
+    padding: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,7 +191,7 @@ h2 {
     line-height: 1.6;
 }
 .testimonial-section {
-    padding: 70px 0 50px 0;
+    padding: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -200,7 +215,7 @@ h2 {
     font-size: 20px;
     color:#16a34a;
 }
-.testimonial-section .paratesti2 {
+.paratesti2 {
     padding: 20px 0px 0px 0px;
     color: #666;
 }
@@ -276,12 +291,77 @@ h2 {
     border: none;
     border-radius: 5px;  
 }
-  
-  
+/* Form pop-up */
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    border: 3px solid #16a34a;
+    z-index: 9;
+    background-color: #16a34a;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    padding: 60px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.form-popup h2 {
+    color:white;
+    margin-bottom: 20px;
+}
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 300px;
+    padding: 20px;
+    background-color: #16a34a;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+    background-color: #0ea5e9;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+
+.show-popup {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
 
 
-
-
-  
 
 

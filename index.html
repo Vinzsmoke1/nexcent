@@ -10,23 +10,62 @@
     <div class="nav">
       <img class="logo" src="Dark Nexcent logo.png" alt="logo">
       <h1>Nexcent</h1>
-      <a href="#" class="button1">Home</a>
-      <a href="#" class="button2">Client</a>
-      <a href="#" class="button3">Feature</a>
-      <a href="#" class="button4">Product</a>
-      <a href="#" class="button5">Testimonial</a>
-      <a href="#" class="button6">About Us</a>
+      <a href="#home" class="button1">Home</a>
+      <a href="#client" class="button2">Client</a>
+      <a href="#feature" class="button3">Feature</a>
+      <a href="#product" class="button4">Product</a>
+      <a href="#testimonial" class="button5">Testimonial</a>
+      <a href="#about-us" class="button6">About Us</a>
+      <button class="login" onclick="openLoginForm()">Login</button>
+      <!------------------------------------Login Form---------------------------------------------------------------------->
+      <div id="loginForm" class="form-popup">
+        <form action="/login" class="form-container">
+            <h2>Login</h2>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeLoginForm()">Close</button>
+        </form>
     </div>
-    <div class="main-section">
+    </div>
+    <div id="home" class="main-section">
       <div>
         <h1 class="header2">Lessons and insights</h1>
         <h1 class="header3">from 8 years</h1>
         <p>Where to grow your business as a photographer: site or social media?</p>
-        <button class="button7">Register</button>
+        <button class="button7" onclick="openForm()">Register</button>
+<!--------------------------------Register Form------------------------------------------------------------------------------>
+<div id="createAccountForm" class="form-popup">
+    <form action="/submit_form" class="form-container">
+        <h2>Create Account</h2>
+
+        <label for="firstname"><b>First Name</b></label>
+        <input type="text" placeholder="Enter First Name" name="firstname" required>
+
+        <label for="lastname"><b>Last Name</b></label>
+        <input type="text" placeholder="Enter Last Name" name="lastname" required>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+        <button type="submit" class="btn">Sign Up</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+</div>
       </div>
+      <div>
       <img class="person" src="nexcent-person.png" alt="technology">
     </div>
-    <div class="client-section">
+    </div>
+    <div id="client" class="client-section">
         <h2>Our Clients</h2>
         <p class="para2">We have been working in some Fortune 500+ clients</p>
     <div class="client-logos">
@@ -39,7 +78,7 @@
         <img src="intel.png" alt="client 7">
     </div>
     </div>
-    <div class="feature-section">
+    <div id="feature" class="feature-section">
         <h2>Manage your entire community</h2>
         <h2>in a single system</h2>
         <p class="para2">Who is Nextcent suitable for?</p>
@@ -61,22 +100,22 @@
           <p>Our membership management software provides full automation of membership renewals and payments.</p>
         </div>
       </div> 
-      <div class="product-section">
+      <div id="product" class="product-section">
         <img src="product-section.png" alt="Product">
         <div class="product-content">
         <h2>The unseen of spending three years at Pixelgrade</h2>
         <p>Discover the untold journey of spending three transformative years at Pixelgrade. From the quiet beginnings to the milestones achieved, delve into the behind-the-scenes experiences that shaped our growth and culture. Uncover the stories of creativity, challenges overcome, and the community that became family. Join us on this retrospective exploration of innovation, collaboration, and the unseen moments that define our journey at Pixelgrade.</p>
       </div>
       </div> 
-      <div class="testimonial-section">
+      <div id="testimonial" class="testimonial-section">
         <img src="EMMAN-2X2.png" alt="Student">
-        <div class="testimonial-content">
+        <div>
           <p>"Choosing Nexcent was one of the best decisions we made. Their customized software solution transformed how we interact with our customers, significantly improving our customer satisfaction." </p>
           <h2>Emman Salces</h2>
           <p class="paratesti2">IT Assistant at Usher Technologies</p>
         </div>
       </div> 
-      <div class="about-section">
+      <div id="about-us" class="about-section">
         <div class="about-content">
           <img class="logo" src="Dark Nexcent logo.png" alt="Nexcent logo">
           <h1>Nexcent</h1>
@@ -114,9 +153,11 @@
           </div>
           <div class="details-column">
             <h2>Stay up to date</h2>
-            <input type="email" placeholder="Your email address">
+            <label for="about-us-email"></label>
+            <input type="email" placeholder="Your email address" name="Email" id="about-us-email" onkeydown="checkEnter(event, 'about-us-email')">
             </div>
           </div>
-        </div>       
+        </div>
+        <script src="/script.js"></script>       
   </body>
 </html>
